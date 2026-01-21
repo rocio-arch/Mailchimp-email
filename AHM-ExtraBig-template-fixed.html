@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <!--[if mso]>
     <xml>
         <o:OfficeDocumentSettings>
@@ -139,6 +141,22 @@
 		img{
 			-ms-interpolation-mode:bicubic !important;
 		}
+
+		/* Dark Mode Support for Outlook */
+		[data-ogsc] .dark-mode-bg-black {
+			background-color: #000000 !important;
+		}
+		[data-ogsc] .dark-mode-text-white {
+			color: #ffffff !important;
+		}
+		@media (prefers-color-scheme: dark) {
+			.dark-mode-bg-black {
+				background-color: #000000 !important;
+			}
+			.dark-mode-text-white {
+				color: #ffffff !important;
+			}
+		}
 </style></head>
 <body style="margin: 0; padding: 0; background-color: #f4f4f4; width: 100%;">
     <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" class="wrapper" style="background-color: #f4f4f4;">
@@ -190,7 +208,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -198,7 +216,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -254,7 +272,7 @@
                                         <div mc:edit="native_ad_1_button">
                                             <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                                 <tr>
-                                                    <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                                    <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                                         <!--[if mso]>
                                                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                                         <w:anchorlock/>
@@ -262,7 +280,7 @@
                                                         </v:roundrect>
                                                         <![endif]-->
                                                         <!--[if !mso]><!-->
-                                                        <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                                        <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                             Klicka här för att ta del av hela nyheten
                                                         </a>
                                                         <!--<![endif]-->
@@ -295,7 +313,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -303,7 +321,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -329,7 +347,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -337,7 +355,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -393,7 +411,7 @@
                                         <div mc:edit="native_ad_2_button">
                                             <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                                 <tr>
-                                                    <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                                    <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                                         <!--[if mso]>
                                                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                                         <w:anchorlock/>
@@ -401,7 +419,7 @@
                                                         </v:roundrect>
                                                         <![endif]-->
                                                         <!--[if !mso]><!-->
-                                                        <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                                        <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                             Klicka här för att ta del av hela nyheten
                                                         </a>
                                                         <!--<![endif]-->
@@ -434,7 +452,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -442,7 +460,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -468,7 +486,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -476,7 +494,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -525,7 +543,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -533,7 +551,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -559,7 +577,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -567,7 +585,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -616,7 +634,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -624,7 +642,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -650,7 +668,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -658,7 +676,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
@@ -707,7 +725,7 @@
                                 </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                        <td align="center" class="dark-mode-bg-black" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
                                             <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
@@ -715,7 +733,7 @@
                                             </v:roundrect>
                                             <![endif]-->
                                             <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                            <a href="#" class="dark-mode-text-white" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
                                                 Klicka här för att ta del av hela nyheten
                                             </a>
                                             <!--<![endif]-->
