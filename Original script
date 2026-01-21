@@ -1,0 +1,114 @@
+// ============================================
+// NEWSLETTER AUTOMATION TRIGGER
+// ============================================
+
+function onEditHandler(e) {
+    // ---------- CONFIGURATION ----------
+  var WEBHOOK_URL = "https://hook.eu2.make.com/a7kogemsw81uwjdor36n8ps6xk14t5xe";
+  var TRIGGER_CELL = "B3";
+  var TRIGGER_VALUE = "Ready to Generate";
+  
+  // ---------- MAIN LOGIC ----------
+  
+  // Exit early if no edit event
+  if (!e) {
+    Logger.log("No edit event detected");
+    return;
+  }
+  
+  var range = e.range;
+  var sheet = range.getSheet();
+  var sheetName = sheet.getName();
+  var cellAddress = range.getA1Notation();
+  var cellValue = range.getValue();
+  
+  // Log for debugging
+  Logger.log("Edit detected: Sheet=" + sheetName + ", Cell=" + cellAddress + ", Value=" + cellValue);
+  
+  // Check if this is our trigger cell with trigger value
+  if (cellAddress === TRIGGER_CELL && cellValue === TRIGGER_VALUE) {
+    
+    Logger.log("TRIGGER ACTIVATED for sheet: " + sheetName);
+    
+    // Update cell to "Processing..." immediately
+    sheet.getRange(TRIGGER_CELL).setValue("Processing...");
+    SpreadsheetApp.flush(); // Force immediate update
+    
+    // Gather data from sheet
+    var payload = {
+      "sheetName": sheetName,
+      "category": sheet.getRange("B2").getValue(),
+      "size": sheet.getRange("B5").getValue(),
+      "templateId": sheet.getRange("B7").getValue(),
+      "nativeAds": sheet.getRange("B4").getValue(),
+      "timestamp": new Date().toISOString(),
+      "triggerCell": TRIGGER_CELL
+    };
+    
+    Logger.log("Payload: " + JSON.stringify(payload));
+    
+    // Send to Make.com webhook
+    var options = {
+      "method": "post",
+      "contentType": "application/json",
+      "payload": JSON.stringify(payload),
+      "muteHttpExceptions": true
+    };
+    
+    try {
+      var response = UrlFetchApp.fetch(WEBHOOK_URL, options);
+      var responseCode = response.getResponseCode();
+      
+      Logger.log("Webhook response code: " + responseCode);
+      
+      if (responseCode === 200) {
+        Logger.log("SUCCESS: Webhook triggered successfully");
+        // Cell will be updated to "Completed" by Make.com workflow
+      } else {
+        Logger.log("ERROR: Webhook returned code " + responseCode);
+        sheet.getRange(TRIGGER_CELL).setValue("Error - Try Again");
+      }
+      
+    } catch (error) {
+      Logger.log("ERROR sending webhook: " + error.toString());
+      sheet.getRange(TRIGGER_CELL).setValue("Error - Try Again");
+    }
+    
+  } else {
+    // Not our trigger cell, do nothing
+    Logger.log("Not a trigger event, ignoring");
+  }
+}
+
+// ---------- MANUAL TEST FUNCTION ----------
+// Use this to test the script manually
+function testTrigger() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var sheetName = sheet.getName();
+  
+  Logger.log("Testing trigger for sheet: " + sheetName);
+  
+  var payload = {
+    "sheetName": sheetName,
+      "category": sheet.getRange("B2").getValue(),
+      "size": sheet.getRange("B5").getValue(),
+      "templateId": sheet.getRange("B7").getValue(),
+      "nativeAds": sheet.getRange("B4").getValue(),
+      "timestamp": new Date().toISOString(),
+      "triggerCell": TRIGGER_CELL
+  };
+  
+  Logger.log("Test payload: " + JSON.stringify(payload));
+  
+  var WEBHOOK_URL = "https://hook.eu2.make.com/g17e41bn6pt4us9ry15bs1eks2ls6rbs";
+  
+  var options = {
+    "method": "post",
+    "contentType": "application/json",
+    "payload": JSON.stringify(payload)
+  };
+  
+  var response = UrlFetchApp.fetch(WEBHOOK_URL, options);
+  Logger.log("Response code: " + response.getResponseCode());
+  Logger.log("Response: " + response.getContentText());
+}
