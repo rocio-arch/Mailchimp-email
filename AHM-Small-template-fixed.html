@@ -151,7 +151,7 @@
 <tr>
 <td>
 <![endif]-->
-<table width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" class="container" style="background-color: #ffffff; width: 600px; max-width: 600px;">
+<table width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" class="container" align="center" style="background-color: #ffffff; width: 600px; max-width: 600px; margin: 0 auto;">
 
                     <!-- Header: Category Text -->
                     <tr>
@@ -172,7 +172,7 @@
                     <!-- Hero Image -->
                     <tr>
                         <td align="center" style="padding: 0; line-height: 0;">
-                            <img mc:edit="hero_image" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=300&fit=crop" alt="Newsletter Hero" width="600" style="max-width: 100%; width: 100%; height: auto; display: block;">
+                            <img mc:edit="hero_image" src="https://via.placeholder.com/600x300/CCCCCC/666666?text=HERO+IMAGE" alt="Newsletter Hero Image" width="600" style="width: 600px; max-width: 100%; height: auto; display: block;">
                         </td>
                     </tr>
 
@@ -180,14 +180,20 @@
                     <tr>
                         <td class="mobile-padding" style="padding: 25px 20px; border-bottom: 1px solid #e0e0e0;">
                             <div mc:edit="article_1_html">
-                                <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;">{{30.array[1].`0`}}</h2>
-                                <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">{{30.array[1].`1`}}</p>
-                                <p class="mobile-small-text" style="margin: 0 0 12px 0; font-size: 12px; color: #666666; font-family: Arial, Helvetica, sans-serif;">Källa: <span style="font-style: italic;">{{30.array[1].`3`}}</span></p>
+                                <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;">
+                                    {{30.array[1].`0`}}
+                                </h2>
+                                <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+                                    {{30.array[1].`1`}}
+                                </p>
+                                <p class="mobile-small-text" style="margin: 0 0 12px 0; font-size: 12px; color: #666666; font-family: Arial, Helvetica, sans-serif;">
+                                    Källa: <span style="font-style: italic;">{{30.array[1].`3`}}</span>
+                                </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
                                         <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
-                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{30.array[1].`2`}}" style="height:44px;v-text-anchor:middle;width:540px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{30.array[1].`2`}}" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
                                             <center style="color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:13px;">Klicka här för att ta del av hela nyheten</center>
                                             </v:roundrect>
@@ -204,18 +210,118 @@
                         </td>
                     </tr>
 
+                    <!-- Native Ad (Blue Background) - Deletable Section -->
+                    <tr mc:repeatable="native_ad">
+                        <td style="padding: 0; background-color: #e6f3ff; border-bottom: 1px solid #e0e0e0;">
+                            <!-- Top spacing -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                                <tr>
+                                    <td height="25" style="height: 25px; line-height: 25px; font-size: 1px;">&nbsp;</td>
+                                </tr>
+                            </table>
+
+                            <!-- Native Ad Image - Single URL for all clients -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                                <tr>
+                                    <td align="center" class="mobile-padding" style="padding: 0 20px; line-height: 0;">
+                                        <img mc:edit="native_ad_image" src="https://via.placeholder.com/560x315/CCCCCC/666666?text=NATIVE+AD+IMAGE" alt="Native Ad Image" width="560" style="width: 560px; max-width: 100%; height: auto; display: block;">
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Spacing after image -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                                <tr>
+                                    <td height="15" style="height: 15px; line-height: 15px; font-size: 1px;">&nbsp;</td>
+                                </tr>
+                            </table>
+
+                            <!-- Text content wrapper -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                                <tr>
+                                    <td class="mobile-padding" style="padding: 0 20px 25px 20px;">
+                                        <!-- Annons label -->
+                                        <p class="mobile-small-text" style="margin: 0 0 8px 0; font-size: 12px; color: #333333; font-family: Arial, Helvetica, sans-serif;" mc:edit="native_ad_label">
+                                            <strong>Annons:</strong> Innehåll från [Sponsor Name]
+                                        </p>
+
+                                        <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;" mc:edit="native_ad_title">
+                                            Native Ad Headline Goes Here
+                                        </h2>
+                                        <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;" mc:edit="native_ad_summary">
+                                            Native ad content summary goes here with relevant details about the sponsored content.
+                                        </p>
+
+                                        <div mc:edit="native_ad_button">
+                                            <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
+                                                <tr>
+                                                    <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
+                                                        <!--[if mso]>
+                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
+                                                        <w:anchorlock/>
+                                                        <center style="color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:13px;">Klicka här för att ta del av hela nyheten</center>
+                                                        </v:roundrect>
+                                                        <![endif]-->
+                                                        <!--[if !mso]><!-->
+                                                        <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                                                            Klicka här för att ta del av hela nyheten
+                                                        </a>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <p class="mobile-small-text" style="margin: 8px 0 0 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif;" mc:edit="native_ad_reference">
+                                            Reference code placeholder
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Banner Ad - Deletable Section -->
+                    <tr mc:repeatable="banner_ad">
+                        <td style="padding: 0;">
+                            <!-- Label -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                                <tr>
+                                    <td class="mobile-padding" style="padding: 15px 20px 5px 20px;">
+                                        <p style="margin: 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif;" mc:edit="banner_ad_label">
+                                            Annons:
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Image with border separator - Single URL for all clients -->
+                            <div align="center" class="mobile-padding" style="padding: 0 20px 20px 20px; line-height: 0; border-bottom: 1px solid #e0e0e0;">
+                                <a href="*|BANNER_AD_URL|*">
+                                    <img mc:edit="banner_ad" src="https://via.placeholder.com/560x100/CCCCCC/666666?text=BANNER+AD" alt="Banner Advertisement" width="560" style="width: 560px; max-width: 100%; height: auto; display: block;">
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+
                     <!-- Article 2 -->
                     <tr>
                         <td class="mobile-padding" style="padding: 25px 20px; border-bottom: 1px solid #e0e0e0;">
                             <div mc:edit="article_2_html">
-                                <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;">{{30.array[2].`0`}}</h2>
-                                <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">{{30.array[2].`1`}}</p>
-                                <p class="mobile-small-text" style="margin: 0 0 12px 0; font-size: 12px; color: #666666; font-family: Arial, Helvetica, sans-serif;">Källa: <span style="font-style: italic;">{{30.array[2].`3`}}</span></p>
+                                <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;">
+                                    {{30.array[2].`0`}}
+                                </h2>
+                                <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+                                    {{30.array[2].`1`}}
+                                </p>
+                                <p class="mobile-small-text" style="margin: 0 0 12px 0; font-size: 12px; color: #666666; font-family: Arial, Helvetica, sans-serif;">
+                                    Källa: <span style="font-style: italic;">{{30.array[2].`3`}}</span>
+                                </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
                                         <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
-                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{30.array[2].`2`}}" style="height:44px;v-text-anchor:middle;width:540px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{30.array[2].`2`}}" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
                                             <center style="color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:13px;">Klicka här för att ta del av hela nyheten</center>
                                             </v:roundrect>
@@ -232,101 +338,24 @@
                         </td>
                     </tr>
 
-                    <!-- Native Ad (Blue Background) - Deletable Section -->
-                    <tr mc:repeatable="native_ad">
-                        <td class="mobile-padding" style="padding: 25px 20px; background-color: #e6f3ff; border-bottom: 1px solid #e0e0e0;">
-                            <!-- Native Ad Image FIRST -->
-                            <img mc:edit="native_ad_image" src="https://mcusercontent.com/544bda980987660252d7d9196/images/cb466930-0b34-21e1-0e54-0f1224b08208.png" alt="Native Ad" width="560" style="max-width: 100%; width: 100%; height: auto; display: block; margin-bottom: 15px;">
-
-                            <!-- Spacer after image -->
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
-                                <tr>
-                                    <td height="20" style="height: 20px; line-height: 20px; font-size: 1px;">&nbsp;</td>
-                                </tr>
-                            </table>
-
-                            <!-- Then Annons label -->
-                            <p class="mobile-small-text" style="margin: 0 0 8px 0; font-size: 12px; color: #333333; font-family: Arial, Helvetica, sans-serif;" mc:edit="native_ad_label">
-                                <strong>Annons:</strong> Innehåll från [Sponsor Name]
-                            </p>
-
-                            <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;" mc:edit="native_ad_title">
-                                Native Ad Headline Goes Here
-                            </h2>
-                            <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;" mc:edit="native_ad_summary">
-                                Native ad content summary goes here with relevant details about the sponsored content.
-                            </p>
-
-                            <div mc:edit="native_ad_button">
-                                <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
-                                    <tr>
-                                        <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
-                                            <!--[if mso]>
-                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:44px;v-text-anchor:middle;width:540px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
-                                            <w:anchorlock/>
-                                            <center style="color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:13px;">Klicka här för att ta del av hela nyheten</center>
-                                            </v:roundrect>
-                                            <![endif]-->
-                                            <!--[if !mso]><!-->
-                                            <a href="#" style="display: block; padding: 12px 24px; font-size: 13px; color: #ffffff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; text-align: center;">
-                                                Klicka här för att ta del av hela nyheten
-                                            </a>
-                                            <!--<![endif]-->
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <p class="mobile-small-text" style="margin: 8px 0 0 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif;" mc:edit="native_ad_reference">
-                                Reference code placeholder
-                            </p>
-                        </td>
-                    </tr>
-
-                    <!-- Banner Ad - Deletable Section -->
-                    <tr mc:repeatable="banner_ad">
-                        <td style="padding: 0;">
-                            <!-- Outlook-only top spacer -->
-                            <!--[if mso]>
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
-                                <tr>
-                                    <td height="5" style="height: 5px; line-height: 5px; font-size: 1px;">&nbsp;</td>
-                                </tr>
-                            </table>
-                            <![endif]-->
-
-                            <!-- Label -->
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
-                                <tr>
-                                    <td class="mobile-padding" style="padding: 15px 20px 5px 20px;">
-                                        <p style="margin: 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif;" mc:edit="banner_ad_label">
-                                            Annons:
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- Image with border separator -->
-                            <div align="center" class="mobile-padding" style="padding: 0 20px 20px 20px; line-height: 0; border-bottom: 1px solid #e0e0e0;">
-                                <a href="*|BANNER_AD_URL|*">
-                                    <img mc:edit="banner_ad" src="https://mcusercontent.com/544bda980987660252d7d9196/images/ca8ca188-3005-c555-25c6-202fb13a3867.jpeg" alt="Banner Advertisement" width="560" style="max-width: 100%; width: 100%; height: auto; display: block;">
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-
                     <!-- Article 3 -->
                     <tr>
                         <td class="mobile-padding" style="padding: 25px 20px; border-bottom: 1px solid #e0e0e0;">
                             <div mc:edit="article_3_html">
-                                <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;">{{30.array[3].`0`}}</h2>
-                                <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">{{30.array[3].`1`}}</p>
-                                <p class="mobile-small-text" style="margin: 0 0 12px 0; font-size: 12px; color: #666666; font-family: Arial, Helvetica, sans-serif;">Källa: <span style="font-style: italic;">{{30.array[3].`3`}}</span></p>
+                                <h2 class="mobile-headline" style="margin: 0 0 12px 0; font-size: 20px; font-weight: bold; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.3;">
+                                    {{30.array[3].`0`}}
+                                </h2>
+                                <p class="mobile-text" style="margin: 0 0 12px 0; font-size: 14px; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5;">
+                                    {{30.array[3].`1`}}
+                                </p>
+                                <p class="mobile-small-text" style="margin: 0 0 12px 0; font-size: 12px; color: #666666; font-family: Arial, Helvetica, sans-serif;">
+                                    Källa: <span style="font-style: italic;">{{30.array[3].`3`}}</span>
+                                </p>
                                 <table cellpadding="0" cellspacing="0" border="0" role="presentation" class="mobile-button" style="width: 100%;">
                                     <tr>
                                         <td align="center" style="background-color: #000000; border-radius: 4px; padding: 0;">
                                             <!--[if mso]>
-                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{30.array[3].`2`}}" style="height:44px;v-text-anchor:middle;width:540px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{30.array[3].`2`}}" style="height:44px;v-text-anchor:middle;width:560px;" arcsize="9%" strokecolor="#000000" fillcolor="#000000">
                                             <w:anchorlock/>
                                             <center style="color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:13px;">Klicka här för att ta del av hela nyheten</center>
                                             </v:roundrect>
@@ -365,7 +394,7 @@
                 </td>
 
                 <td class="editor-image" width="130" valign="middle" style="width: 130px;">
-                    <img mc:edit="editor_photo" src="https://mcusercontent.com/544bda980987660252d7d9196/images/50e2d995-e237-43a8-ff50-73d9f39abc48.jpg" alt="Rebecka Kaplan Sturk" width="130" style="max-width: 100%; width: 100%; height: auto; display: block; border-radius: 4px;">
+                    <img mc:edit="editor_photo" src="https://mcusercontent.com/544bda980987660252d7d9196/images/744c4764-b4ca-6755-2d58-2d2e12d2e638.jpg" alt="Rebecka Kaplan Sturk" width="130" height="130" style="width: 130px; height: 130px; max-width: 100%; display: block; border-radius: 4px;">
                 </td>
             </tr>
         </table>
@@ -402,30 +431,6 @@
                 <a href="#" style="color: #000000; text-decoration: underline; font-weight: bold; font-style: italic;">Ta del av tipset här</a>
             </p>
                             </div>
-                        </td>
-                    </tr>
-
-                    <!-- Footer -->
-                    <tr>
-                        <td class="mobile-padding" style="padding: 20px; background-color: #f4f4f4; text-align: center;">
-                            <p style="margin: 0 0 10px 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif; line-height: 1.4;">
-                                Nyhetsbrevet är enbart avsett för dig som arbetar inom sjukvården.
-                            </p>
-                            <p style="margin: 0 0 10px 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif; line-height: 1.4;">
-                                Din integritet är viktig för oss. <a href="https://addhealthmedia.com/integritetspolicy/" style="color: #0066cc; text-decoration: underline;">Klicka här</a> för att läsa Add Health Medias integritetspolicy i enlighet med GDPR.
-                            </p>
-                            <p style="margin: 0 0 10px 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif; line-height: 1.4;">
-                                Innehåll i detta nyhetsbrev kan vara skapat av AI. Väsentlig information bör verifieras med originalkällan.
-                            </p>
-                            <p style="margin: 0 0 10px 0; font-size: 11px; color: #666666; font-family: Arial, Helvetica, sans-serif; line-height: 1.4;">
-                                Du kan inte svara på det här nyhetsbrevet. För att kontakta oss, <a href="https://www.praktiskmedicin.se/kontakta-oss/" style="color: #0066cc; text-decoration: underline;">klicka här</a>.
-                            </p>
-                            <p style="margin: 0 0 10px 0; font-size: 11px; color: #999999; font-family: Arial, Helvetica, sans-serif;">
-                                <a href="*|UNSUB|*" style="color: #0066cc; text-decoration: underline;">why did I get this?</a> | <a href="*|UNSUB|*" style="color: #0066cc; text-decoration: underline;">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*" style="color: #0066cc; text-decoration: underline;">update subscription preferences</a>
-                            </p>
-                            <p style="margin: 0; font-size: 11px; color: #999999; font-family: Arial, Helvetica, sans-serif;">
-                                Add Health Media · Hagagatan 4 · Stockholm 113 68 · Sweden
-                            </p>
                         </td>
                     </tr>
 
